@@ -5,7 +5,7 @@ from telegram import Update, WebAppInfo, InlineKeyboardButton, InlineKeyboardMar
 from telegram.ext import Application, CommandHandler, CallbackContext
 
 # URL вашего веб-приложения
-WEB_APP_URL = "http://localhost:8000"  # Замените на реальный URL
+WEB_APP_URL = ""  # Замените на реальный URL
 
 
 async def start(update: Update, context: CallbackContext):
