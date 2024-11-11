@@ -5,29 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Комплектующие ПК</title>
     <link rel="stylesheet" href="styles.css">
+    <script defer src="app.js"></script>
 </head>
 <body>
     <div class="container">
         <h1>Комплектующие ПК</h1>
-        <div class="card" id="cpu">
-            <img src="images/cpu.png" alt="Процессоры">
-            <p>Процессоры</p>
+        <div class="buttons">
+            <button class="component-button" data-item="cpu">Процессор</button>
+            <button class="component-button" data-item="gpu">Видеокарта</button>
+            <button class="component-button" data-item="motherboard">Материнская плата</button>
+            <button class="component-button" data-item="ram">Оперативная память</button>
+            <button class="component-button" data-item="storage">Накопитель</button>
         </div>
-        <div class="card" id="gpu">
-            <img src="images/gpu.png" alt="Видеокарты">
-            <p>Видеокарты</p>
-        </div>
-        <div class="card" id="motherboard">
-            <img src="images/motherboard.png" alt="Материнские платы">
-            <p>Материнские платы</p>
-        </div>
-        <div class="card" id="ram">
-            <img src="images/ram.png" alt="Оперативная память">
-            <p>Оперативная память</p>
-        </div>
-        <div class="card" id="storage">
-            <img src="images/storage.png" alt="Накопители">
-            <p>Накопители</p>
+
+        <!-- Блок для отображения информации о компоненте -->
+        <div class="info">
+            <h2 class="component-title">Выберите компонент</h2>
+            <img class="component-image" src="" alt="Изображение комплектующего" style="display: none;">
+            <p class="component-description">Нажмите на кнопку для получения информации.</p>
         </div>
     </div>
 </body>
