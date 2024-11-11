@@ -11,16 +11,32 @@
     <div class="container">
         <h1>Комплектующие ПК</h1>
         <div class="buttons">
-            <button class="component-button" data-item="cpu">Процессор</button>
-            <button class="component-button" data-item="gpu">Видеокарта</button>
-            <button class="component-button" data-item="motherboard">Материнская плата</button>
-            <button class="component-button" data-item="ram">Оперативная память</button>
-            <button class="component-button" data-item="storage">Накопитель</button>
+            <button class="component-button" data-item="cpu">
+                <img src="images/cpu.png" alt="Процессор">
+                Процессор
+            </button>
+            <button class="component-button" data-item="gpu">
+                <img src="images/gpu.png" alt="Видеокарта">
+                Видеокарта
+            </button>
+            <button class="component-button" data-item="motherboard">
+                <img src="images/motherboard.png" alt="Материнская плата">
+                Материнская плата
+            </button>
+            <button class="component-button" data-item="ram">
+                <img src="images/ram.png" alt="Оперативная память">
+                Оперативная память
+            </button>
+            <button class="component-button" data-item="storage">
+                <img src="images/storage.png" alt="Накопитель">
+                Накопитель
+            </button>
         </div>
 
         <!-- Блок для отображения информации о компоненте -->
         <div class="info" id="info">
             <h2 class="component-title">Выберите компонент</h2>
+            <img class="component-image" id="component-image" src="" alt="Изображение компонента">
             <p class="component-description">Нажмите на кнопку для получения информации.</p>
         </div>
     </div>
