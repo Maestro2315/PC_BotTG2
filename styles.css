@@ -1,54 +1,45 @@
-
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
 body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
+    background-color: #2c2f33;
 }
 
-header {
+.container {
     text-align: center;
-    margin-top: 20px;
 }
 
 h1 {
-    font-size: 36px;
-    color: #2c3e50;
+    color: #8a2be2;
+    margin-bottom: 20px;
 }
 
-.buttons-container {
-    display: flex;
-    justify-content: center;
-    margin-top: 40px;
-    gap: 10px;
-}
-
-.component-button {
-    background-color: #3498db;
+.card {
+    background-color: #4b0082;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px;
+    width: 150px;
+    display: inline-block;
     color: white;
-    font-size: 18px;
-    padding: 15px 30px;
-    border: none;
+    transition: transform 0.2s;
     cursor: pointer;
-    border-radius: 5px;
-    transition: background-color 0.3s;
 }
 
-.component-button:hover {
-    background-color: #2980b9;
+.card:hover {
+    transform: scale(1.05);
 }
 
-#description-container {
-    margin-top: 40px;
-    text-align: center;
-}
-
-#component-description {
-    font-size: 18px;
-    color: #7f8c8d;
+.card img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
 }

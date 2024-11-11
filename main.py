@@ -1,41 +1,36 @@
+from aiogram import Bot, Dispatcher, types
+from aiogram.types import ReplyKeyboardMarkup, KeyboardButton, WebAppInfo
+import asyncio
 
+TOKEN = '7447836010:AAHJ7d0IFts0JG4DK_5vgdpMDKxHxBScrM4'
+WEB_APP_URL = 'https://maestro2315.github.io/PC_BotTG2/'  # Замените на ваш URL с GitHub Pages
 
+bot = Bot(token=TOKEN)
+dp = Dispatcher(bot=bot)
 
-from telegram import Update, WebAppInfo, InlineKeyboardButton, InlineKeyboardMarkup
-from telegram.ext import Application, CommandHandler, CallbackContext
+# Обработчик команды /start
+@dp.message_handler(commands=['start'])
+async def start_command(message: types.Message):
+    # Создаем кнопки с иконками
+    web_app_button_1 = KeyboardButton(text="💻 Процессоры", web_app=WebAppInfo(url=f"{WEB_APP_URL}?item=cpu"))
+    web_app_button_2 = KeyboardButton(text="🖥 Видеокарты", web_app=WebAppInfo(url=f"{WEB_APP_URL}?item=gpu"))
+    web_app_button_3 = KeyboardButton(text="🔧 Материнские платы", web_app=WebAppInfo(url=f"{WEB_APP_URL}?item=motherboard"))
+    web_app_button_4 = KeyboardButton(text="💾 Оперативная память", web_app=WebAppInfo(url=f"{WEB_APP_URL}?item=ram"))
+    web_app_button_5 = KeyboardButton(text="📀 Накопители", web_app=WebAppInfo(url=f"{WEB_APP_URL}?item=storage"))
 
-# URL вашего веб-приложения
-WEB_APP_URL = ""  # Замените на реальный URL
+    # Создаем клавиатуру в один столбец по центру
+    keyboard = ReplyKeyboardMarkup(resize_keyboard=True, row_width=1)
+    keyboard.add(web_app_button_1, web_app_button_2, web_app_button_3, web_app_button_4, web_app_button_5)
 
-
-async def start(update: Update, context: CallbackContext):
-    # Создаем клавиатуру с кнопкой для открытия веб-приложения
-    keyboard = [
-        [
-            InlineKeyboardButton("Открыть веб-приложение с комплектующими", web_app=WebAppInfo(url=WEB_APP_URL))
-        ]
-    ]
-
-    # Создаем разметку для кнопки
-    reply_markup = InlineKeyboardMarkup(keyboard)
-
-    # Отправляем сообщение с кнопкой
-    await update.message.reply_text(
-        "Привет! Нажми кнопку ниже, чтобы открыть веб-приложение с комплектующими для ПК.",
-        reply_markup=reply_markup
+    # Отправляем сообщение с кнопками
+    await message.answer(
+        "Выберите комплектующие для получения подробной информации:",
+        reply_markup=keyboard
     )
 
-
-def main():
-    # Указываем токен бота
-    application = Application.builder().token("7447836010:AAHJ7d0IFts0JG4DK_5vgdpMDKxHxBScrM4").build()
-
-    # Добавляем обработчик команды /start
-    application.add_handler(CommandHandler("start", start))
-
-    # Запускаем бота
-    application.run_polling()
-
+async def main():
+    # Запуск бота
+    await dp.start_polling()
 
 if __name__ == '__main__':
-    main()
+    asyncio.run(main())

@@ -7,25 +7,28 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
+    <div class="container">
         <h1>Комплектующие ПК</h1>
-        <p>Выберите нужную категорию комплектующего и получите информацию.</p>
-    </header>
-
-    <div class="buttons-container">
-        <button class="component-button" data-item="processor">Процессоры</button>
-        <button class="component-button" data-item="gpu">Видеокарты</button>
-        <button class="component-button" data-item="motherboard">Материнские платы</button>
-        <button class="component-button" data-item="ram">Оперативная память</button>
-        <button class="component-button" data-item="ssd">SSD</button>
-        <button class="component-button" data-item="hdd">Жесткие диски</button>
+        <div class="card" id="cpu">
+            <img src="images/cpu.png" alt="Процессоры">
+            <p>Процессоры</p>
+        </div>
+        <div class="card" id="gpu">
+            <img src="images/gpu.png" alt="Видеокарты">
+            <p>Видеокарты</p>
+        </div>
+        <div class="card" id="motherboard">
+            <img src="images/motherboard.png" alt="Материнские платы">
+            <p>Материнские платы</p>
+        </div>
+        <div class="card" id="ram">
+            <img src="images/ram.png" alt="Оперативная память">
+            <p>Оперативная память</p>
+        </div>
+        <div class="card" id="storage">
+            <img src="images/storage.png" alt="Накопители">
+            <p>Накопители</p>
+        </div>
     </div>
-
-    <div id="description-container">
-        <h2>Описание</h2>
-        <p id="component-description">Выберите компонент для отображения информации.</p>
-    </div>
-
-    <script src="app.js"></script>
 </body>
 </html>
