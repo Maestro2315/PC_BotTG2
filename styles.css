@@ -32,6 +32,7 @@ h1 {
     color: white;
     transition: transform 0.2s;
     cursor: pointer;
+    text-align: center;
 }
 
 .card:hover {
@@ -39,7 +40,7 @@ h1 {
 }
 
 .card img {
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
     margin-bottom: 10px;
 }
