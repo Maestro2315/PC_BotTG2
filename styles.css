@@ -1,46 +1,18 @@
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    font-family: Arial, sans-serif;
-    background-color: #2c2f33;
-}
-
-.container {
-    text-align: center;
-}
-
-h1 {
+.component-title {
     color: #8a2be2;
-    margin-bottom: 20px;
+    font-size: 24px;
+    margin-bottom: 15px;
 }
 
-.card {
-    background-color: #4b0082;
-    border-radius: 10px;
-    padding: 20px;
-    margin: 10px;
+.component-image {
     width: 150px;
-    display: inline-block;
-    color: white;
-    transition: transform 0.2s;
-    cursor: pointer;
-    text-align: center;
+    height: auto;
+    margin-bottom: 15px;
 }
 
-.card:hover {
-    transform: scale(1.05);
-}
-
-.card img {
-    width: 80px;
-    height: 80px;
-    margin-bottom: 10px;
+.component-description {
+    color: #e0e0e0;
+    font-size: 16px;
+    max-width: 300px;
+    margin: 0 auto;
 }
