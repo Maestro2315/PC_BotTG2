@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Комплектующие ПК</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Комплектующие ПК</h1>
+        <p>Выберите нужную категорию комплектующего и получите информацию.</p>
+    </header>
+
+    <div class="buttons-container">
+        <button class="component-button" data-item="processor">Процессоры</button>
+        <button class="component-button" data-item="gpu">Видеокарты</button>
+        <button class="component-button" data-item="motherboard">Материнские платы</button>
+        <button class="component-button" data-item="ram">Оперативная память</button>
+        <button class="component-button" data-item="ssd">SSD</button>
+        <button class="component-button" data-item="hdd">Жесткие диски</button>
+    </div>
+
+    <div id="description-container">
+        <h2>Описание</h2>
+        <p id="component-description">Выберите компонент для отображения информации.</p>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
