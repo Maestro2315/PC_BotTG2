@@ -1,4 +1,3 @@
-// Данные о каждом компоненте
 const componentsData = {
     cpu: {
         title: "Процессор",
@@ -27,7 +26,6 @@ const componentsData = {
     }
 };
 
-// Функция для обновления информации о компоненте
 function updateComponentInfo(item) {
     const title = document.querySelector('.component-title');
     const description = document.querySelector('.component-description');
@@ -45,7 +43,6 @@ function updateComponentInfo(item) {
     }
 }
 
-// Добавляем обработчики событий для кнопок
 document.querySelectorAll('.component-button').forEach(button => {
     button.addEventListener('click', () => {
         const item = button.getAttribute('data-item');
